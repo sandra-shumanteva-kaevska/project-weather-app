@@ -77,6 +77,7 @@ const forcastWeather = (cityName) => {
   const apiForcast = `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&units=metric&APPID=9dcf660f4adfbe64a1f1edf5962b352d`;
   fetch(apiForcast)
     .then((weatherForcast) => {
+      console.log(weatherForcast);
       return weatherForcast.json();
     })
     .then((weatherForcast) => {
@@ -99,8 +100,9 @@ const forcastWeather = (cityName) => {
       };
 
       filteredArr.forEach((item, index) => {
-        forcast[index].querySelector(".filtredForcastDate").innerText =
-          " " + dataFormat(item.dt_txt);
+        forcast[index].querySelector(
+          ".filtredForcastDate"
+        ).innerText = dataFormat(item.dt_txt);
         forcast[index].querySelector(
           ".filtredForcastTemperatureMin"
         ).innerText = " " + item.temp_min;

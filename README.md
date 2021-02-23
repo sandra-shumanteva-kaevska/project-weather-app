@@ -8,4 +8,4 @@ I used API to fetch the current weather and weather prognosis for the next days.
 
 ## View it live
 
-https://loving-shirley-de65b9.netlify.app/
+https://weather-app-sandra-shumanteva.netlify.app/
